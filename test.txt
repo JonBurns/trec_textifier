@@ -1,0 +1,6 @@
+2014-07-02 23:36   4408793   s3://aws-publicdatasets/trec/ts/streamcorpus-2014-v0_3_0-ts-filtered/2011-12-04-00/news-108-24c98982c2f8b3d5e7ebcad7bc8088eb-0715766e82dcc7b485d5c48509be18f5-4b2113ec2b90a6c3fbfaf0aa37d44946.sc.xz.gpg
+2014-07-02 23:36   1699398   s3://aws-publicdatasets/trec/ts/streamcorpus-2014-v0_3_0-ts-filtered/2011-12-04-00/news-34-c5532d5a6ba6e65d215c4fdff1b9df72-29bbb0eab66392b6440d994ffbf5e90e-5c89881af4b12f3efd51a26956235165.sc.xz.gpg
+2014-07-02 23:36   2060713   s3://aws-publicdatasets/trec/ts/streamcorpus-2014-v0_3_0-ts-filtered/2011-12-04-00/news-35-02c2eca7cbdcca8433bdbe7898eb78d6-2dbc722e5853dcb4bbf016aca8b8564f-ecb71917f5a480d7b4d23823ae27b980.sc.xz.gpg
+2014-07-02 23:37    677869   s3://aws-publicdatasets/trec/ts/streamcorpus-2014-v0_3_0-ts-filtered/2011-12-04-01/news-12-328dca0270c01adb6d41a5a920b3d799-9a26af8ee500c15f519dd186ce8084be-9dc60ed1f40ba289b6e40c076b7795d4.sc.xz.gpg
+2014-07-02 23:37   1476974   s3://aws-publicdatasets/trec/ts/streamcorpus-2014-v0_3_0-ts-filtered/2011-12-04-01/news-26-08138907abd3f987292208371ccb6aca-8a8b1e17d53dd60fc83ee107cfe97549-191d0a5dedaaf59621ddacb41752fe5b.sc.xz.gpg
+2014-07-02 23:37    199820   s3://aws-publicdatasets/trec/ts/streamcorpus-2014-v0_3_0-ts-filtered/2011-12-04-01/news-3-f7f819ca605cea85571c34bba32b0296-1eb2c3b587031f0cfc0490e1b3c20746-232f2eada6f799ac58e713043e7fc98c.sc.xz.gpg
