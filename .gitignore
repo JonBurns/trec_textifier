@@ -52,3 +52,5 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+#TrecStuff
+streamcorpus-2014-v0_3_0-ts-filtered.s3-paths.txt
