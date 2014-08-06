@@ -55,6 +55,8 @@ visible_texts = filter(visible, texts)
 # We need to keep track of each sentences index for the TREC submission
 sentence_idx = 0
 
+
+
 with open('filtered_documents/' + file_name + '.txt', 'w') as writer:
     # Iterate through the good sentences we've found
     for text in visible_texts:
