@@ -56,3 +56,5 @@ docs/_build/
 streamcorpus-2014-v0_3_0-ts-filtered.s3-paths.txt
 new_stuff/
 aws-publicdatasets/
+*.txt
+

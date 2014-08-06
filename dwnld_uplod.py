@@ -31,7 +31,7 @@ def decrypt_decompress(fname, old_folder_path, new_folder_path):
 
 #subprocess.call("cat streamcorpus-2014-v0_3_0-ts-filtered.s3-paths.txt | cut -d ':' -f3 | sed 's/\/\//:\/\/s3.amazonaws.com\//g' | parallel -j 10 'wget --recursive --continue --no-host-directories --no-parent --reject \"index.html*\" http{}';", shell = True)
 
-# # subprocess.call("cat test.txt | cut -d ':' -f3 | sed 's/\/\//:\/\/s3.amazonaws.com\//g' | parallel -j 10 'wget --recursive --continue --no-host-directories --no-parent --reject \"index.html*\" http{}';", shell = True)
+subprocess.call("cat test.txt | cut -d ':' -f3 | sed 's/\/\//:\/\/s3.amazonaws.com\//g' | parallel -j 10 'wget --recursive --continue --no-host-directories --no-parent --reject \"index.html*\" http{}';", shell = True)
 
 # The above calls download the Trec data to the follow file tree:
 # Working Directory
@@ -50,7 +50,7 @@ path = 'aws-publicdatasets/trec/ts/streamcorpus-2014-v0_3_0-ts-filtered/'
 folders = os.listdir(path)
 
 ## Stuff if running on Mac (get rid of .ds_store)
-folders = folders[1:]    
+#folders = folders[1:]    
     
 ##
 
@@ -65,11 +65,11 @@ for folder in folders:
     files = os.listdir(path_to_folder)
 
     ## .ds_store again
-    files = files[1:]
+    #files = files[1:]
 
     # For each file we need to decrypt it, decompress it and then move it to a new folder
     for f in files:
         decrypt_decompress(f, path_to_folder + '/', new_folder)
 
     # Now we want to upload the finished files into S3
-    subprocess.call('aws s3 cp --recursive ' + new_folder + ' s3://trec2014test/' + folder, shell = True)
+    subprocess.call('time aws s3 cp --recursive ' + new_folder + ' s3://trec2014test/' + folder + ' &', shell = True)
