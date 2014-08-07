@@ -23,6 +23,9 @@ p = re.compile(ur'([0-9]{10})-([a-zA-Z0-9]{32})')
 with open(sys.argv[1]) as f:
     content = f.readlines()
 
+# Should be of form folder/
+destination = sys.argv[2]
+
 all_sentences = "".join(content)
 
 # MEMETRACKER only contains one document per file. Therefore we don't need to split on the document id's
@@ -57,7 +60,7 @@ sentence_idx = 0
 
 
 
-with open('filtered_documents/' + file_name + '.txt', 'w') as writer:
+with open(destination + file_name + '.txt', 'w') as writer:
     # Iterate through the good sentences we've found
     for text in visible_texts:
 

@@ -32,6 +32,9 @@ regex = re.compile('(?<=[.!?\n\r]) +', re.DOTALL|re.M)
 with open(sys.argv[1]) as f:
     content = f.readlines()
 
+# Should be of form folder/
+destination = sys.argv[2]
+
 all_sentences = "".join(content)
 
 # The document will look roughly like this:
@@ -87,8 +90,6 @@ time_stamps_doc_ids = ['{0}-{1}'.format(thing[0], thing[1]) for thing in time_st
 
 documents = [document for document in documents if len(replace_all_weird_chars(document)) > 0]
 
-print 
-
 documents = documents[::2]
 
 current_idx = 0
@@ -108,7 +109,7 @@ for document in documents:
     visible_texts = filter(visible, texts)
 
     sentence_idx = 0
-    with open('filtered_documents/' + time_stamps_doc_ids[current_idx] + '.txt', 'w') as writer:
+    with open(destination + time_stamps_doc_ids[current_idx] + '.txt', 'w') as writer:
         for thing in visible_texts:
             if len(thing.string.replace('\n', '').strip(' ').split(' ')) < 3:
                 continue
